@@ -1,0 +1,14 @@
+
+label.required:after {
+    @apply text-xs text-error;
+    vertical-align: super;
+    content: " *";
+}
+
+.form-label {
+    @apply text-gray-700 capitalize;
+}
+
+.form-error {
+    @apply text-error font-bold text-sm italic lowercase;
+}

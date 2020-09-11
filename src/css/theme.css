@@ -1,0 +1,13 @@
+
+.dimmed {
+    @apply bg-gray-900 opacity-50;
+}
+
+h1.title {
+	@apply font-bold text-center text-4xl my-8;
+}
+ 
+h2.title {
+	@apply font-bold text-center text-2xl my-4;
+}
+ 
