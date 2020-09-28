@@ -1,8 +1,8 @@
-import { createContext } from 'react';
+import * as React from 'react';
 
 const isProd = process.env.NODE_ENV === 'production';
 const url = `${process.env.FRONTEND_URL!.replace(/\/$/, "")}/ma/`;
-const siteId = 7;
+const siteId = Number(process.env.SITE_ID);
 
 declare global {
     interface Window { _paq: any; }
@@ -44,5 +44,9 @@ class Analytics {
     }
 }
 
-export const AnalyticsContext = createContext<Analytics | null>(null);
+export function useAnalytics(): Analytics {
+    return React.useContext(AnalyticsContext)!;
+}
+
+export const AnalyticsContext = React.createContext<Analytics | null>(null);
 export const analytics = new Analytics(siteId);

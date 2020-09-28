@@ -2,9 +2,12 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV || 'development'}`
 })
 
+const frontendUrl = process.env.FRONTEND_URL.replace(/\/*$/, "") + "/";
+
 module.exports = {
   siteMetadata: {
     name: 'Gatsby Template',
+    siteUrl: frontendUrl,
   },
   plugins: [
     {
@@ -14,7 +17,6 @@ module.exports = {
           require("postcss-import"),
           require("postcss-nesting"),
           require(`postcss-preset-env`)({ stage: 0 }),
-          require("postcss-simple-vars"),
           require(`tailwindcss`)(`./tailwind.config.js`),
         ],
       },
