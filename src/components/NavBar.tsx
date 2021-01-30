@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { FaBars as Bars } from 'react-icons/fa';
 import { AnchorLink as Link } from "gatsby-plugin-anchor-links";
 

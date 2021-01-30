@@ -9,13 +9,16 @@ module.exports = {
     name: 'Gatsby Template',
     siteUrl: frontendUrl,
   },
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true,
+    FAST_DEV: true,
+    FAST_REFRESH: true,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
-          require("postcss-import"),
-          require("postcss-nesting"),
           require(`postcss-preset-env`)({ stage: 0 }),
           require(`tailwindcss`)(`./tailwind.config.js`),
         ],

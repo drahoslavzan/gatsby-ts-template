@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   future: {
@@ -18,19 +18,19 @@ module.exports = {
       },
       colors: {
         error: {
-          default:defaultTheme.colors.red['600'],
+          DEFAULT: colors.red['600'],
         },
         primary: {
-          hl: defaultTheme.colors.blue['200'],
-          light: defaultTheme.colors.blue['500'],
-          default: defaultTheme.colors.blue['600'],
-          dark: defaultTheme.colors.blue['700'],
+          DEFAULT: colors.blue['600'],
+          hl: colors.blue['200'],
+          light: colors.blue['500'],
+          dark: colors.blue['700'],
         },
         secondary: {
-          hl: defaultTheme.colors.orange['200'],
-          light: defaultTheme.colors.orange['400'],
-          default: defaultTheme.colors.orange['600'],
-          dark: defaultTheme.colors.orange['800'],
+          DEFAULT: colors.orange['600'],
+          hl: colors.orange['200'],
+          light: colors.orange['400'],
+          dark: colors.orange['800'],
         },
       }
     },

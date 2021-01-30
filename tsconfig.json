@@ -15,6 +15,7 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "preserveConstEnums": true,
+        "types": ["node", "@emotion/react/types/css-prop"]
     },
     "exclude": [
         "node_modules",

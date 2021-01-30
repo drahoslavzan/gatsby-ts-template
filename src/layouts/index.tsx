@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import { analytics, AnalyticsContext } from "../utils/analytics";
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import NavBar, { navbarHeight } from '../components/NavBar';
 import Footer, { footerHeight } from '../components/Footer';
 import "../css/tailwind.css";
